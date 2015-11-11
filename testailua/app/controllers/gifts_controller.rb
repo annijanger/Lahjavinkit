@@ -1,6 +1,7 @@
 class GiftsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_gift, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_filter :require_permission, only: [:edit, :update, :destroy]
 
   # GET /gifts
   # GET /gifts.json
@@ -70,6 +71,12 @@ class GiftsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def gift_params
-      params.require(:gift).permit(:title, :description, :age, :gender)
+      params.require(:gift).permit(:title, :description, :age, :gender, :user_id)
+    end
+
+    def require_permission
+      if current_user != @gift.user_id
+        redirect_to '/'
+      end
     end
 end

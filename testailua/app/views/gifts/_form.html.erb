@@ -27,6 +27,7 @@
     <%= f.label :gender %><br>
     <%= f.text_field :gender %>
   </div>
+  <%= f.hidden_field :user_id, :value => current_user.id%> 
   <div class="actions">
     <%= f.submit %>
   </div>
