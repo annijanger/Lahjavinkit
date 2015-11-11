@@ -1,3 +1,23 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.about {
+	ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+    }
+}
+
+.welcome {
+	ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+    }
+    a {
+       display: block;
+       width: 60px;
+    }
+}
