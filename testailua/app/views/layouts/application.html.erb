@@ -3,10 +3,21 @@
 <head>
   <title>Lahjavinkkejä</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="//railsgirls.com/assets/bootstrap.css">
+  <link rel="stylesheet" href="//railsgirls.com/assets/bootstrap-theme.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <nav class="navbar navbar-default">
+        <div>
+          <ul class="nav navbar-nav">
+            <li><a href="/pages/welcome">Etusivu</a></li>
+            <li><a href="/gifts">Lisää lahjavinkki</a></li>
+            <li><a href="/pages/about">About</a></li>
+          </ul>
+        </div>
+    </nav>
   <ul class="nav">
 </ul>
   <p class="navbar-text pull-right">
@@ -25,7 +36,9 @@
 <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
-<%= yield %>
+<div class="container">
+  <%= yield %>
+</div>
 
 </body>
 </html>

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  root :to => redirect('/pages/welcome')
   devise_for :users
   get 'pages/welcome'
+  get 'pages/about'
 
   resources :gifts
 
