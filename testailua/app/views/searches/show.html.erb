@@ -1,13 +1,13 @@
-<h1>Search Result</h1>
+<h1>Hakutulokset</h1>
 <% if @search.search_gifts.empty? %>
-	<p>No Gifts Found</p>
+	<p>Haullasi ei löytynyt tuloksia.</p>
 <% else %>
 	<% @search.search_gifts.each do |c| %>
 		<div>
-			<h2>Title: <%= c.title %></h2>
-			<p>Description: <%= c.description %> </p>
-			<p>Gender: <%= c.gender %></p>
-			<p>Age: <%= c.age %></p>
+			<h2>Nimi: <%= c.title %></h2>
+			<p>Kuvaus: <%= c.description %> </p>
+			<p>Sukupuoli: <%= c.gender %></p>
+			<p>Ikä: <%= c.age %></p>
 		</div>
 	<% end %>
 <% end %>
