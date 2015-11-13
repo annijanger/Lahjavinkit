@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'pages/welcome'
   get 'pages/about'
 
+  resources :searches
   resources :gifts
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,13 @@
+<h1>Search Result</h1>
+<% if @search.search_gifts.empty? %>
+	<p>No Gifts Found</p>
+<% else %>
+	<% @search.search_gifts.each do |c| %>
+		<div>
+			<h2>Title: <%= c.title %></h2>
+			<p>Description: <%= c.description %> </p>
+			<p>Gender: <%= c.gender %></p>
+			<p>Age: <%= c.age %></p>
+		</div>
+	<% end %>
+<% end %>

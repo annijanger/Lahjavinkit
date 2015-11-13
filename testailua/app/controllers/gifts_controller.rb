@@ -6,7 +6,7 @@ class GiftsController < ApplicationController
   # GET /gifts
   # GET /gifts.json
   def index
-    @gifts = Gift.all
+     @gifts = Gift.search(params[:search])
   end
 
   # GET /gifts/1

@@ -1,0 +1,15 @@
+<h2>Search</h2>
+
+<%= form_for @search do |s| %>
+  <div class="field">
+    <%= s.label :gender %><br />
+    <%= s.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= s.label :min_price, "Age Range" %><br />
+    <%= s.text_field :min_age, size: 10 %> -
+    <%= s.text_field :max_age, size: 10 %>
+  </div>
+  <div class="actions"><%= s.submit "Search" %></div>
+  
+<% end %>
