@@ -75,6 +75,7 @@ class GiftsController < ApplicationController
     end
 
     def require_permission
+      #h
       if current_user.id != @gift.user_id
         redirect_to '/'
       end
