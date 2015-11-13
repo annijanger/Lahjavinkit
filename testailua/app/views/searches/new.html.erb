@@ -1,15 +1,15 @@
-<h2>Search</h2>
-
+<h2>Etsi</h2>
+<p> Etsi lahjavinkkejä sukupuolen ja iän mukaan. </p>
 <%= form_for @search do |s| %>
   <div class="field">
-    <%= s.label :gender %><br />
+    <%= s.label :gender, "Sukupuoli" %><br />
     <%= s.text_field :gender %>
   </div>
   <div class="field">
-    <%= s.label :min_price, "Age Range" %><br />
+    <%= s.label :min_price, "Ikä" %><br />
     <%= s.text_field :min_age, size: 10 %> -
     <%= s.text_field :max_age, size: 10 %>
   </div>
-  <div class="actions"><%= s.submit "Search" %></div>
+  <div class="actions"><%= s.submit "Etsi" %></div>
   
 <% end %>

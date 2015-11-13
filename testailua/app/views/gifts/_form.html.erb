@@ -12,23 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label :title, "Nimi" %><br>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label :description, "Kuvaus" %><br>
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :age %><br>
+    <%= f.label :age, "Ikä" %><br>
     <%= f.number_field :age %>
   </div>
   <div class="field">
-    <%= f.label :gender %><br>
+    <%= f.label :gender, "Sukupuoli" %><br>
     <%= f.text_field :gender %>
   </div>
   <%= f.hidden_field :user_id, :value => current_user.id%> 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Lisää lahjavinkki" %>
   </div>
 <% end %>
