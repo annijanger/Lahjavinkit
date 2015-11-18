@@ -18,10 +18,10 @@
         <td><%= gift.description %></td>
         <td><%= gift.age %></td>
         <td><%= gift.gender %></td>
-        <td><%= link_to 'Show', gift %></td>
+        <td><%= link_to 'Näytä', gift %></td>
         <% if user_signed_in? && (current_user.id == gift.user_id || current_user.admin?) %>
-        <td><%= link_to 'Edit', edit_gift_path(gift) %></td>
-        <td><%= link_to 'Destroy', gift, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Muokkaa', edit_gift_path(gift) %></td>
+        <td><%= link_to 'Poista', gift, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
       </tr>
     <% end %>
