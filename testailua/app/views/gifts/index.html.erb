@@ -1,7 +1,8 @@
 <h1>Lahjavinkit</h1>
 <p> Tällä sivulla voit katsella lisättyjä lahjavinkkejä sekä etsiä mieluisiasi lahjoja antamillasi hakusanoilla </p>
-<table>
-  <thead>
+
+<table class="table">
+   <thead> 
     <tr>
       <th>Nimi</th>
       <th>Kuvaus</th>
@@ -13,21 +14,20 @@
 
   <tbody>
     <% @gifts.each do |gift| %>
-      <tr>
-        <td><%= gift.title %></td>
-        <td><%= gift.description %></td>
-        <td><%= gift.age %></td>
-        <td><%= gift.gender %></td>
-        <td><%= link_to 'Näytä', gift %></td>
-        <% if user_signed_in? && (current_user.id == gift.user_id || current_user.admin?) %>
-        <td><%= link_to 'Muokkaa', edit_gift_path(gift) %></td>
-        <td><%= link_to 'Poista', gift, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
+       <tr>
+          <td><%= gift.title %></td>
+          <td><%= gift.description %></td>
+          <td><%= gift.age %></td>
+          <td><%= gift.gender %></td>
+          <td><%= link_to 'Näytä', gift %></td>
+          <td><% if user_signed_in? && (current_user.id == gift.user_id || current_user.admin?) %></td>
+          <td><%= link_to 'Muokkaa', edit_gift_path(gift) %></td>
+          <td><%= link_to 'Poista', gift, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
 
 <%= link_to 'Etsi lahjavinkkejä', new_search_path %>

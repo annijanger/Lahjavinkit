@@ -1,22 +1,22 @@
 <p>
-  <strong>Title:</strong>
+  <strong>Otsikko:</strong>
   <%= @gift.title %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Kuvaus:</strong>
   <%= @gift.description %>
 </p>
 
 <p>
-  <strong>Age:</strong>
+  <strong>Ikä:</strong>
   <%= @gift.age %>
 </p>
 
 <p>
-  <strong>Gender:</strong>
+  <strong>Sukupuoli:</strong>
   <%= @gift.gender %>
 </p>
 
-<%= link_to 'Edit', edit_gift_path(@gift) %> |
-<%= link_to 'Back', gifts_path %>
+<%= link_to 'Muokkaa', edit_gift_path(@gift) %> |
+<%= link_to 'Takaisin', gifts_path %>
