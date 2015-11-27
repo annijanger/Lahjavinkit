@@ -30,7 +30,7 @@ class GiftsController < ApplicationController
 
     respond_to do |format|
       if @gift.save
-        format.html { redirect_to @gift, notice: 'Gift was successfully created.' }
+        format.html { redirect_to @gift, notice: 'Lahjavinkki lisätty.' }
         format.json { render :show, status: :created, location: @gift }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class GiftsController < ApplicationController
   def update
     respond_to do |format|
       if @gift.update(gift_params)
-        format.html { redirect_to @gift, notice: 'Gift was successfully updated.' }
+        format.html { redirect_to @gift, notice: 'Lahjavinkki päivitetty.' }
         format.json { render :show, status: :ok, location: @gift }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class GiftsController < ApplicationController
   def destroy
     @gift.destroy
     respond_to do |format|
-      format.html { redirect_to gifts_url, notice: 'Gift was successfully destroyed.' }
+      format.html { redirect_to gifts_url, notice: 'Lahjavinkki poistettu.' }
       format.json { head :no_content }
     end
   end
