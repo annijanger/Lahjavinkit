@@ -27,7 +27,11 @@
     <%= f.label :gender, "Sukupuoli" %><br>
     <%= f.text_field :gender %>
   </div>
-  <%= f.hidden_field :user_id, :value => current_user.id%> 
+  <div class="field">
+    <%= f.label :tag_list, "Tagit" %><br>
+    <%= f.text_field :tag_list %>
+  </div>
+  <%= f.hidden_field :user_id, :value => current_user.id%>
   <div class="actions">
     <%= f.submit "Lisää lahjavinkki" %>
   </div>
